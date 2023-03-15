@@ -61,7 +61,7 @@ class StudentMarkSystem:
         print("Select a course to input marks for students:")
         for i, course in enumerate(self.courses):
             print(f"{i+1}. {course.name}")
-        course_index = int(input("Enter the number of the course: ")) - 1
+        course_index = int(input("Enter the course number: ")) - 1
         selected_course = self.courses[course_index]
         for student in self.students:
             mark = int(input(f"Enter mark for student {student.name} in course {selected_course.name}: "))
