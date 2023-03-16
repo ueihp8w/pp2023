@@ -1,4 +1,4 @@
-from input import StudentMarkSystem
+from output import StudentMarkSystem
 
 if __name__=="__main__":
     marksheet = StudentMarkSystem()
