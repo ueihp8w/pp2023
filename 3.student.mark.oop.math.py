@@ -143,22 +143,22 @@ if __name__=="__main__":
         print("6. Show marks for a given course")
         print("7. Show average GPA of student")
         print("8. Exit\n")
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
+        choice = input("Enter your choice: ")
+        if choice == "1":
             marksheet.input_students()
-        elif choice == 2:
+        elif choice == "2":
             marksheet.input_courses()
-        elif choice == 3:
+        elif choice == "3":
             marksheet.input_marks()
-        elif choice == 4:
+        elif choice == "4":
             marksheet.list_courses()
-        elif choice == 5:
+        elif choice == "5":
             marksheet.list_students()
-        elif choice == 6:
+        elif choice == "6":
             marksheet.show_marks()
-        elif choice == 7:
+        elif choice == "7":
             marksheet.show_GPAs()
-        elif choice == 8:
+        elif choice == "8":
             print("Exiting program...")
             break
         else:
