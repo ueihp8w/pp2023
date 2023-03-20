@@ -83,20 +83,20 @@ if __name__=="__main__":
         print("5. List all students")
         print("6. Show marks for a given course")
         print("7. Exit\n")
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
+        choice = input("Enter your choice: ")
+        if choice == "1":
             input_students()
-        elif choice == 2:
+        elif choice == "2":
             input_courses()
-        elif choice == 3:
+        elif choice == "3":
             input_marks()
-        elif choice == 4:
+        elif choice == "4":
             list_courses()
-        elif choice == 5:
+        elif choice == "5":
             list_students()
-        elif choice == 6:
+        elif choice == "6":
             show_marks()
-        elif choice == 7:
+        elif choice == "7":
             print("Exiting program...")
             break
         else:
