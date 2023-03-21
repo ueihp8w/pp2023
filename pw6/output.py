@@ -49,12 +49,12 @@ class StudentMarkSystem(Input):
         selected_course = self.courses[course_index]
         print(f"Marks for course {selected_course.name}:")
         for mark in self.marks:
-            if mark.get_course() == selected_course:
+            if mark.get_course().id == selected_course.id:
                 student_id = mark.get_student().id
                 student_name = mark.get_student().name
                 mark_value = mark.get_mark()
                 print(f"{student_id} - {student_name}: {mark_value}")
-        if not any(mark.get_course() == selected_course for mark in self.marks):
+        if not any(mark.get_course().id == selected_course.id for mark in self.marks):
             print("No marks for this course.")
 
     def show_GPAs(self):
@@ -86,9 +86,11 @@ class StudentMarkSystem(Input):
         dbfile = open("students", "wb")
         pickle.dump(self.students, dbfile)
         dbfile.close()
+
         dbfile = open("courses", "wb")
         pickle.dump(self.courses, dbfile)
         dbfile.close()
+
         dbfile = open("marks", "wb")
         pickle.dump(self.marks, dbfile)
         dbfile.close()
